@@ -6,18 +6,14 @@ public class Palindraa {
     System.out.println("Input TEXT:");
     String input= sc.nextLine();
     int n = input.length();
-    boolean flag = false;
-    for(int i = 0; i < n/2; i++){
-        if( input.charAt(i) != input.charAt(n-1-i)){
-            break;
-        }
-        else {
-            flag = true;
-        }
+    String st="";
+    for(int i=n-1;i>=0;i--){
+        st=st+input.charAt(i);
     }
-    if(flag){
-        System.out.println("The text is a palindrome");
-    } else {
+    if(input.equals(st)){
+        System.out.println("The text is palindrome");
+    }
+    else{
         System.out.println("The text is not a palindrome");
     }
     }
